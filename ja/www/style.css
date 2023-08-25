@@ -1,0 +1,53 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(245px, 100%), 1fr));
+    gap: 1rem;
+  }
+  
+  /* 以下あしらいの実装 */
+  * {
+    box-sizing: border-box;
+  }
+  
+  section {
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 1rem;
+  }
+  
+  section > * + * {
+    margin-top: 2rem;
+  }
+
+  .card {
+    box-shadow:
+      0 0.2px 0.3px rgba(0, 0, 0, 0.017),
+      0 0.4px 0.7px rgba(0, 0, 0, 0.024),
+      0 0.6px 1.2px rgba(0, 0, 0, 0.03),
+      0 1px 1.9px rgba(0, 0, 0, 0.035),
+      0 1.5px 2.9px rgba(0, 0, 0, 0.04),
+      0 2.4px 4.5px rgba(0, 0, 0, 0.046),
+      0 4px 7.5px rgba(0, 0, 0, 0.053),
+      0 8px 15px rgba(0, 0, 0, 0.07)
+    ;
+    border-radius: 4px;
+  }
+  
+  .card__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #aaa;
+    padding: 2rem;
+  }
+
+  h1, h2 {
+    color: #aaa;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
