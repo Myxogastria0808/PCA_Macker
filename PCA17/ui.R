@@ -104,10 +104,10 @@ shinyUI(fluidPage(
   #Download
   downloadButton('downloadPlot', label = 'Download PCA Graph 1'),
   #summary
-  h3("Principal Component Score"),
+  h3("Principal Component Scores"),
   verbatimTextOutput("summary_1"), 
   #round
-  h3("Eigenvector Value"),
+  h3("Eigenvalues"),
   verbatimTextOutput("round_1"), 
   ########################################################################################
   div(class="space"),
@@ -932,9 +932,9 @@ shinyUI(fluidPage(
   #Download
   downloadButton('downloadPlot2', label = 'Download PCA Graph 2'),
   #summary
-  h3("Principal Component Score"),
+  h3("Principal Component Scores"),
   verbatimTextOutput("summary_2"), 
   #round
-  h3("Eigenvector Value"),
+  h3("Eigenvalues"),
   verbatimTextOutput("round_2")
 ))

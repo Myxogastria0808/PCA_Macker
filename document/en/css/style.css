@@ -1,0 +1,407 @@
+/*header config*/
+@media screen and (max-width: 850px) {
+  .PC {
+      display: none;
+  }
+}
+@media screen and (min-width: 850px) {
+  .mobile {
+      display: none;
+  }
+}
+.site-header{
+  background: rgba(251, 250, 245, 0.485);
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 100;
+  height: 64px;
+  box-shadow: 0px  4px 6px 0px rgba(0, 0, 0, 0.482);
+}
+.site-header.transform {
+  background: rgb(251, 250, 245);
+}
+.PC-width {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+.gnav {
+  padding-right: 20px;
+}
+.site-logo img{
+  height: 64px;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.gnav__menu{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.gnav__menu__item{
+  margin-left: 20px;
+  list-style:none;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+.gnav__menu__item a{
+  color: #333;
+  text-decoration: none;
+}
+.gnav__menu__item::after {
+  position: absolute;
+  bottom: .3em;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: rgb(31, 190, 187);
+  opacity: 0;
+  transition: .3s;
+  margin-bottom: -4px;
+}
+.gnav__menu__item:hover::after {
+  margin-bottom: -4px;
+  bottom: 0;
+  opacity: 1;
+  height: 2px;
+}
+.rubyposition_under{
+  display: inline-block;
+}
+.rubyposition_under ruby{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  text-align-last: center;
+}
+.PC_span ruby{
+  font-size: 20px;
+  text-align-last: center;
+}
+.mobile_span ruby{
+  font-size: 30px;
+  text-align-last: left;
+}
+/* ハンバーガーボタン
+==============================　*/
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  margin-top: -7px;
+  cursor: pointer;
+}
+
+.toggle-btn__line {
+  background: rgb(0, 0, 0);
+  display: block;
+  height: 2px;
+  position: absolute;
+  transition: transform 0.5s;
+  width: 100%;
+}
+
+.toggle-btn__line--top {
+  top: 3px;
+}
+.toggle-btn__line--center {
+  top: 15px;
+}
+.toggle-btn__line--bottom {
+  top: 27px;
+}
+.toggle-btn__line--top.active {
+  top: 15px;
+  transform: rotate(45deg);
+}
+.toggle-btn__line--center.active {
+  transform: scaleX(0);
+}
+.toggle-btn__line--bottom.active {
+  top: 15px;
+  transform: rotate(135deg);
+}
+/* ナビゲーションメニュー
+==============================　*/
+.global-nav {
+  display: none;
+  position: fixed;
+  background: rgba(251, 250, 245);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.global-nav__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.global-nav__item {
+  margin-bottom: 30px;
+  list-style: none;
+}
+.global-nav__item a {
+  color: rgb(39, 39, 39);
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.global-nav__item a:hover {
+  opacity: 0.7;
+}
+
+
+
+/*config*/
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+.max-width {
+  max-width: 1024px !important;
+}
+
+/*top config*/
+.head-space {
+  width: 100%;
+  height: 118px;
+}
+.top-div {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.top-img {
+  height: 170px;
+}
+.top-btn {
+  max-width: 430px !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.btn-outline-info:hover {
+  color: white !important;
+}
+.title-space {
+  width: 100%;
+  height: 100px;
+}
+
+/*explain config*/
+.how-to-use-div {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.how-to-use-img-1 {
+  max-width: 500px;
+  height: 300px;
+  background-image: url(../img/how_to_use_1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-table {
+  max-width: 500px;
+  height: 300px;
+  background-image: url(../img/how_to_use_table.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-2 {
+  max-width: 500px;
+  height: 300px;
+  background-image: url(../img/how_to_use_2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-3 {
+  max-width: 700px;
+  height: 400px;
+  background-image: url(../img/how_to_use_3.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-4 {
+  max-width: 700px;
+  height: 400px;
+  background-image: url(../img/how_to_use_4.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-5 {
+  max-width: 700px;
+  height: 400px;
+  background-image: url(../img/how_to_use_5.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-6 {
+  max-width: 700px;
+  height: 400px;
+  background-image: url(../img/how_to_use_6.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-7 {
+  max-width: 500px;
+  height: 300px;
+  background-image: url(../img/how_to_use_7.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-graph-1 {
+  max-width: 700px;
+  height: 400px;
+  background-image: url(../img/pca_graph_1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-graph-2 {
+  max-width: 700px;
+  height: 400px;
+  background-image: url(../img/pca_graph_2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-principal-component-scores {
+  max-width: 500px;
+  height: 200px;
+  background-image: url(../img/principal_component_scores.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-eigenvalues {
+  max-width: 500px;
+  height: 200px;
+  background-image: url(../img/eigenvalues.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+#how-to-use {
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+.explain-space {
+  width: 100%;
+  height: 20px;
+}
+.explain-figcaption-space {
+  width: 100%;
+  height: 30px;
+}
+.explain-detail-space {
+  width: 100%;
+  height: 70px;
+}
+.explain-subtitle-space {
+  width: 100%;
+  height: 40px;
+}
+.graph-padding {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+.footer-space {
+  width: 100%;
+  height: 300px;
+}
+
+/*footer*/
+footer {
+  box-shadow: 0px  -4px 6px 0px rgba(0, 0, 0, 0.482);
+  height: 200px;
+}
+.footer {
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-detail-space {
+  width: 100%;
+  height: 20px;
+}
+.footer-max-width {
+  width: 100%;
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.hex-logo {
+  height: 100px;
+  background-image: url(../img/pca-maker.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sumire-logo {
+  height: 100px;
+  background-image: url(../img/sumireproduction.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.used-package {
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -310,20 +310,20 @@
   margin-left: auto;
   margin-right: auto;
 }
-.how-to-use-img-principal-component-score {
+.how-to-use-img-principal-component-scores {
   max-width: 500px;
   height: 200px;
-  background-image: url(../img/principal_component_score.webp);
+  background-image: url(../img/principal_component_scores.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: auto;
   margin-right: auto;
 }
-.how-to-use-img-eigenvector-value {
+.how-to-use-img-eigenvalues {
   max-width: 500px;
   height: 200px;
-  background-image: url(../img/eigenvector_value.webp);
+  background-image: url(../img/eigenvalues.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

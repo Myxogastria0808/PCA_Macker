@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel = "shortcut icon", href = "./img/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>PCA Maker</title>
+</head>
+<body>
+    <!-------------------------header---------------------------------->
+    <header class="site-header">
+        <div class="PC-width PC">
+            <a href="/">
+                <h1 class="site-logo">
+                    <img src="./img/pca-maker.webp" alt="PCA Maker">
+                </h1>
+            </a>
+            <nav class="gnav PC">
+                <ul class="gnav__menu PC">
+                    <li class="gnav__menu__item PC"><a class="PC" href="#how-to-use">
+                        <span class="rubyposition_under PC_span text-dark"><ruby>Document<rt>How to use</rt></ruby></span>
+                    </a></li>
+                    <li class="gnav__menu__item PC"><a class="PC" href="https://www.sumireproduction.co.jp/">
+                        <span class="rubyposition_under PC_span text-dark"><ruby>Company<rt>Company overview</rt></ruby></span>
+                    </a></li>
+                </a></li>
+                <li class="gnav__menu__item PC"><a class="PC" href="https://pca.sumire.bio/">
+                    <span class="rubyposition_under PC_span text-dark"><ruby>日本語<rt>日本語に翻訳</rt></ruby></span>
+                </a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <a class="toggle-btn mobile">
+            <span class="toggle-btn__line toggle-btn__line--top mobile"></span>
+            <span class="toggle-btn__line toggle-btn__line--center mobile"></span>
+            <span class="toggle-btn__line toggle-btn__line--bottom mobile"></span>
+        </a>
+        <nav class="global-nav mobile">
+            <div class="global-nav__inner mobile">
+                <ul class="global-nav__list mobile">
+                    <li class="global-nav__item mobile"><a class="a_mobile mobile" href="#how-to-use">
+                        <span class="rubyposition_under mobile_span text-dark"><ruby>Document<rt>How to use</rt></ruby></span>
+                    </a></li>
+                    <li class="global-nav__item mobile"><a class="a_mobile mobile" href="https://www.sumireproduction.co.jp/">
+                        <span class="rubyposition_under mobile_span text-dark"><ruby>Company<rt>Company overview</rt></ruby></span>
+                    </a></li>
+                    <li class="global-nav__item mobile"><a class="a_mobile mobile" href="https://pca.sumire.bio/">
+                        <span class="rubyposition_under mobile_span text-dark"><ruby>日本語<rt>日本語に翻訳</rt></ruby></span>
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-------------------------header---------------------------------->
+
+    <div class="head-space body"></div>
+    <div class="top-div">
+        <img class="top-img" src="./img/pca-maker.webp" alt="PCA Maker">
+        <h1 class="text-center font-weight text-dark h1">PCA Maker</h1>
+        <h1 class="text-center font-weight text-muted h1">The web service of principal component analysis</h1>
+        <div class="container-fluid top-btn">
+            <div class="row">
+                <div class="col">
+                    <a href="https://pca.sumire.bio/">
+                        <button type="button" class="btn btn-outline-info font-weight-bold btn-lg">Get Started</button>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#how-to-use">
+                        <button type="button" class="btn btn-info font-weight-bold text-white btn-lg">Learn PCA Maker</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid max-width">
+        <div class="title-space"></div>
+        <h2 class="h2 text-right text-dark">What is PCA Maker?</h2>
+        <div class="explain-space"></div>
+        <p class="text-right text-dark h6">
+            PCA Maker is a web service. It is designed that can perform PCA (Principa Component Analysis) easily.
+        </p>
+        <div class="title-space"></div>
+        <h2 class="h2 text-right text-dark">Principal Component Analysis</h2>
+        <div class="explain-space"></div>
+        <figure class="text-right">
+            <blockquote class="blockquote">
+                <p class="h6">
+                    多次元データのもつ情報をできるだけ損わずに低次元空間に情報を縮約する方法。
+                    多次元データを２次元・３次元データに縮約できれば、データ全体の雰囲気を視覚化することができる。視覚化により、データが持つ情報を解釈しやすくなる。
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Reference source (Translated to English): <cite title="Source Title">https://statistics.co.jp/reference/software_R/statR_9_principal.pdf</cite>
+            </figcaption>
+        </figure>
+        <div class="title-space"></div>
+        <h2 id="how-to-use" class="h2 text-right text-dark">How to use</h2>
+        <div class="explain-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ① 以下のような欠損値のないcsvファイルを用意します。
+        </p>
+        <p class="text-right text-dark h6">
+            例示しているデータは、setosa・versicolor・virginica の3種類のアヤメについて、
+            それぞれ Sepal_length・Sepal_width・Petal_length・Petal_widthの4項目のデータを集めたものです。
+            主成分分析は、このような多次元のデータを2次元に圧縮して、データの特徴を捉えることができます。
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+        </svg>
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div class="h6">
+                <p class="h6 font-weight-bold text-right">csvファイルをUTF-8で保存する必要あり</p>
+                csvを保存する際に、文字コードがUTF-8で保存されることを確認してください。Shift-JIS形式では、PCA Makerがcsvファイルを正常に読み込めません。
+                </br>
+                Excelをご利用になられている方は、保存する際に「ファイル」→「エクスポート」→ 「ファイルの種類の変更」と進んでいき、「CSV UTF-8 (コンマ区切り) (*.csv)」
+                の形式を選択して保存してください。
+            </div>
+        </div>
+        <div class="how-to-use-img-1"></div>
+        <div class="explain-figcaption-space"></div>
+        <figcaption class="blockquote-footer">
+            Reference source (Partially edited): <cite title="Source Title">https://liclog.net/wp-content/uploads/2020/12/iris-dataset.csv</cite>
+        </figcaption>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+        </svg>
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div class="h6">
+                <p class="h6 font-weight-bold text-right">csvファイルのデータの構造</p>
+                データ構造は、以下の形に従ってください。
+                </br>
+                ※データ構造を以下の形にしないと、PCA Makerで正確に主成分分析を行うことができません。
+            </div>
+        </div>
+        <div class="how-to-use-img-table"></div>
+        <p class="text-right text-dark h6">
+            青で塗られている領域は、必ず数値でなければなりません。文字や空白セル(NA値)が存在した場合、エラーが表示されます。
+            白で塗られている部分は、空白セル(NA値)以外であれば問題ありません。
+        </p>
+        <div class="explain-detail-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ② データの要素数に応じて、要素数を選択します。
+        </p>
+        <p class="text-right text-dark h6">
+            例示しているデータは、setosa・versicolor・virginica の3種類の要素を持っているので、
+            "3"を選択します。
+            </br>
+            ※要素数は、3~20までの範囲で利用可能です。
+        </p>
+        <div class="how-to-use-img-2"></div>
+        <div class="explain-detail-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ③ csvデータを読み込みます。
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+        </svg>
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div class="h6">
+                <p class="h6 font-weight-bold text-right">ファイルを読み込んだ際に発生しがちなエラーと対処法</p>
+                ① Error: 'x' must be numeric
+                </br>
+                [解決方法]
+                </br>
+                本来数値である部分に、数値でないものが混ざっています。
+                文字が紛れ込んでいたり、全角の数字が混じっていないか確認し、データを修正しましょう。
+                </br>
+                </br>
+                ② Error: missing value where TRUE/FALSE needed
+                </br>
+                [解決方法]
+                </br>
+                第一列にラベルを持ってきていない場合に発生しがちなエラーです。
+                また、csvファイル内に欠損値がある場合も、同様のエラーが発生します。
+                データの形式は、手順①で示したデータ形式にする必要があります。
+                データ形式が正しいにも関わらずエラーが出る場合は、欠損値がファイル内に混ざっていることを疑いましょう。
+                csvのデータ内に空白のセルが混ざっている場合があります。
+                空白のセルをすべて排除して、再度PCA Makerに読み込ませてみましょう。
+            </div>
+        </div>
+        <div class="how-to-use-img-3"></div>
+        <div class="explain-detail-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ④ csvデータの列情報を入力します。
+        </p>
+        <p class="text-right text-dark h6">
+            「Start Row」には、"2"を、「End Row」には、"csvデータの最終列の列番号"を入力してください。
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+        </svg>
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div class="h6">
+                <p class="h6 font-weight-bold text-right">列情報を入力する際に気を付けること</p>
+                PCA Makerは、ラベルの列(Excelの表示で第1列に当たる部分)を第1列と認識します。
+                そのため、「Start Row」には"2"を入力して下さい。
+            </div>
+        </div>
+        <p class="text-right text-dark h6">
+            例示しているデータは、第2列から第5列までがデータの存在する列となっているため、以下の画像のように数値を入力をしました。
+        </p>
+        <div class="how-to-use-img-4"></div>
+        <div class="explain-detail-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ⑤ csvデータの各要素の行情報を入力します。
+        </p>
+        <p class="text-right text-dark h6">
+            「Start Column of Nth Factor」には、第N番目の要素の始まりの行をマイナス1した値を、「End Column of Nth Factor」には、第N番目の要素の終わりの行をマイナス1した値を入力してください。
+        </p>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </symbol>
+        </svg>
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div class="h6">
+                <p class="h6 font-weight-bold text-right">各要素の行情報を入力する際に気を付けること</p>
+                PCA Makerは、ラベルの行(Excelの表示で第1行に当たる部分)を行と認識しません。
+                そのため、Excelで表示されている行番号をマイナス1する必要があることに注意してください。
+            </div>
+        </div>
+        <p class="text-right text-dark h6">
+            例示しているデータは、Excelの表示で第2行から第51行までが1つ目の要素 (setosa)、第52行から第101行までが2つ目の要素 (versicolor)、第102行から第151行までが3つ目の要素 (virginica) となっています。
+            そのため、PCA makerに入力する際には全てマイナス1した値を入力しています。
+        </p>
+        <div class="how-to-use-img-5"></div>
+        <div class="explain-detail-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ⑥ 各要素のラベルを付与します。
+        </p>
+        <p class="text-right text-dark h6">
+            例示しているデータの第1要素は setosa、第2要素は versicolor、第3要素は virginica であるので、
+            以下の画像のようにラベルを付与しています。
+        </p>
+        <div class="how-to-use-img-6"></div>
+        <div class="explain-detail-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ⑦ 計算方法の設定 
+        </p>
+        <p class="text-right text-dark h6">
+            特別な理由がない限り、標準化は「True」にしておいてください。
+            標準化を行うことで、分散の大きな変数の主成分に対する影響が大きくなって
+            しまうことを防ぐことができます。標準化は、各項目の単位が異なるときに
+            特に有効に働きます。
+        </p>
+        <div class="how-to-use-img-7"></div>
+        <div class="explain-detail-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">
+            ⑧ グラフの表示の調整
+        </p>
+        <p class="text-right text-dark h6">
+            PCA Makerは、2つのパターンのグラフを出力することができます。
+            目的に合わせてグラフの表示を調節してください。
+        </p>
+        <p class="text-right text-dark font-weight-bold h6 graph-padding">[Pattern 1 PCA Graph]</p>
+        <div class="how-to-use-img-graph-1"></div>
+        <p class="text-right text-dark font-weight-bold h6 graph-padding">[Pattern 2 PCA Graph]</p>
+        <div class="how-to-use-img-graph-2"></div>
+        <div class="title-space"></div>
+        <h2 class="h2 text-right text-dark">Interpretation of results</h2>
+        <div class="explain-space"></div>
+        <p class="text-right text-dark h6">
+            PCA Maker displays the results of a principal component analysis in a graph, principal component scores, and eigenvalues.
+        </p>
+        <div class="explain-subtitle-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">Principal Component Scores</p>
+        <figure class="text-right">
+            <blockquote class="blockquote">
+                <p class="h6">
+                    元のデータを各主成分に変換した値を主成分得点と言います。
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Reference source (Translated to English): <cite title="Source Title">https://www.nttcoms.com/service/research/dataanalysis/principal-component-analysis/</cite>
+            </figcaption>
+        </figure>
+        <p class="h6 text-dark text-right">
+            各主成分得点の Standard deviation (標準偏差)、Proportion of Variance (分散の割合)、Cumulative Proportion (累積比率)
+            を確認することができます。
+        </p>
+        <div class="how-to-use-img-principal-component-scores"></div>
+        <div class="explain-subtitle-space"></div>
+        <p class="text-right font-weight-bold text-dark h5">Eigenvalues</p>
+        <figure class="text-right">
+            <blockquote class="blockquote">
+                <p class="h6">
+                    「それぞれの主成分の重要度の違いを表現」した値を固有値といいます。
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                Reference source (Translated to English): <cite title="Source Title">https://qiita.com/Ken-ichi_Hironaka/items/c7d99d6d1dee2f3f936f</cite>
+            </figcaption>
+        </figure>
+        <p class="h6 text-dark text-right">
+            各主成分における各項目の寄与率を表しています。
+        </p>
+        <div class="how-to-use-img-eigenvalues"></div>
+        <div class="footer-space"></div>
+    </div>
+    <!-------------------------footer---------------------------------->
+    <footer>
+        <div class="footer-detail-space"></div>
+        <div class="container-fluid footer">
+            <div class="row">
+                <div class="col hex-logo"></div>
+                <div class="col sumire-logo"></div>
+            </div>
+        </div>
+        <div class="footer-detail-space"></div>
+        <div class="container-fluid used-package text-dark h6 text-center">
+            Acknowledgment: shiny, rgl, pca3d, devtools, ggbiplot
+        </div>
+    </footer>
+    <!-------------------------footer---------------------------------->
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
