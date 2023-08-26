@@ -310,6 +310,26 @@
   margin-left: auto;
   margin-right: auto;
 }
+.how-to-use-img-principal-component-score {
+  max-width: 500px;
+  height: 200px;
+  background-image: url(../img/principal_component_score.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.how-to-use-img-eigenvector-value {
+  max-width: 500px;
+  height: 200px;
+  background-image: url(../img/eigenvector_value.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
 #how-to-use {
   display: block;
   padding-top: 70px;
@@ -326,6 +346,10 @@
 .explain-detail-space {
   width: 100%;
   height: 70px;
+}
+.explain-subtitle-space {
+  width: 100%;
+  height: 40px;
 }
 .graph-padding {
   padding-top: 40px;
