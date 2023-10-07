@@ -117,72 +117,72 @@ shinyUI(fluidPage(
      "Input csv Data"),
   fluidRow(
     column(width = 6,
-           #number1
-           numericInput("column_start1", 
-                        label = h3("Start Column of 1st Factor"), 
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
+                        value = 1)
+    ),
+    column(width = 6,
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
                         value = 2)
     ),
+  ),
+  fluidRow(
     column(width = 6,
-           #number1
-           numericInput("column_end1", 
-                        label = h3("End Column of 1st Factor"), 
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
                         value = 3)
     ),
-  ),
-  fluidRow(
     column(width = 6,
-           #number2
-           numericInput("column_start2", 
-                        label = h3("Start Column of 2nd Factor"), 
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
                         value = 4)
     ),
+  ),
+  fluidRow(
     column(width = 6,
-           #number2
-           numericInput("column_end2", 
-                        label = h3("End Column of 2nd Factor"), 
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
                         value = 5)
     ),
-  ),
-  fluidRow(
     column(width = 6,
-           #number3
-           numericInput("column_start3", 
-                        label = h3("Start Column of 3rd Factor"), 
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
                         value = 6)
     ),
+  ),
+  fluidRow(
     column(width = 6,
-           #number3
-           numericInput("column_end3", 
-                        label = h3("End Column of 3rd Factor"), 
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
                         value = 7)
     ),
-  ),
-  fluidRow(
     column(width = 6,
-           #number4
-           numericInput("column_start4", 
-                        label = h3("Start Column of 4th Factor"), 
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
                         value = 8)
     ),
-    column(width = 6,
-           #number4
-           numericInput("column_end4", 
-                        label = h3("End Column of 4th Factor"), 
-                        value = 9)
-    ),
   ),
   fluidRow(
     column(width = 6,
-           #number5
-           numericInput("column_start5", 
-                        label = h3("Start Column of 5th Factor"), 
-                        value = 10)
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
+                        value = 9)
     ),
     column(width = 6,
-           #number5
-           numericInput("column_end5", 
-                        label = h3("End Column of 5th Factor"), 
-                        value = 11)
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
+                        value = 10)
     ),
   ),
   h3(id = "h3_label",

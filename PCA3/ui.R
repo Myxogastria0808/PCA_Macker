@@ -117,44 +117,44 @@ shinyUI(fluidPage(
      "Input csv Data"),
   fluidRow(
     column(width = 6,
-           #number1
-           numericInput("column_start1", 
-                        label = h3("Start Column of 1st Factor"), 
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
+                        value = 1)
+    ),
+    column(width = 6,
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
                         value = 2)
     ),
+  ),
+  fluidRow(
     column(width = 6,
-           #number1
-           numericInput("column_end1", 
-                        label = h3("End Column of 1st Factor"), 
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
                         value = 3)
     ),
-  ),
-  fluidRow(
     column(width = 6,
-           #number2
-           numericInput("column_start2", 
-                        label = h3("Start Column of 2nd Factor"), 
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
                         value = 4)
     ),
-    column(width = 6,
-           #number2
-           numericInput("column_end2", 
-                        label = h3("End Column of 2nd Factor"), 
-                        value = 5)
-    ),
   ),
   fluidRow(
     column(width = 6,
-           #number3
-           numericInput("column_start3", 
-                        label = h3("Start Column of 3rd Factor"), 
-                        value = 6)
+           #number16
+           numericInput("column_start16", 
+                        label = h3("Start Column of 16th Factor"), 
+                        value = 5)
     ),
     column(width = 6,
-           #number3
-           numericInput("column_end3", 
-                        label = h3("End Column of 3rd Factor"), 
-                        value = 7)
+           #number16
+           numericInput("column_end16", 
+                        label = h3("End Column of 16th Factor"), 
+                        value = 6)
     ),
   ),
   h3(id = "h3_label",
